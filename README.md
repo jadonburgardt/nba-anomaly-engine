@@ -17,10 +17,18 @@
 - streamlit — turns Python scripts into interactive web dashboards
 - requests — makes HTTP calls from Python, used for hitting external APIs or services
 
-**For individual testing:**
+**For individual viewing:**
 
-python (data_ingestion.py) , (feature_engineering.py), (model_training.py) , (.\anomaly_detection.py)
+- python (data_ingestion.py) , (feature_engineering.py), (model_training.py) , (.\anomaly_detection.py)
 
 **To run FASTAPI server and expose HTTP endpoints:**
 
-uvicorn api:app --reload
+- uvicorn api:app --reload
+
+**Testing**
+
+- Test individual files by typing "pytest tests/(test_feature_engineering.py),(test_data_ingestion),(test_anomaly_detection) -v"
+
+- to generate a visualized html report of our tests, run "pytest tests/ -v --html=tests/report.html"
+
+but we will improve this using Github Actions to run tests automatically on every push:
