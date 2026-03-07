@@ -1,5 +1,19 @@
 **An NBA Player Performance Forecasting & Anomaly Detection API**
 
+**Features**
+
+- Data ingestion
+- Feature engineering
+- Model training with MLflow
+- Anomaly detection (Z-score + Isolation Forest)
+- FastAPI server with 3 endpoints
+- Streamlit dashboard with interactive charts
+- Automated tests with GitHub Actions CI
+
+**To Use:**
+
+- run "streamlit run dashboard.py"
+
 **To Start Virtual Environment:**
 
 - run ".\venv\Scripts\activate" within the nba-anomaly-engine folder to load the venv and this projects packages
@@ -27,8 +41,8 @@
 
 **Testing**
 
-- Test individual files by typing "pytest tests/(test_feature_engineering.py),(test_data_ingestion),(test_anomaly_detection) -v"
+Automated using Github Actions to run tests automatically upon every commit.
 
-- to generate a visualized html report of our tests, run "pytest tests/ -v --html=tests/report.html"
+- (Not needed) Test individual files by typing "pytest tests/(test_feature_engineering.py),(test_data_ingestion),(test_anomaly_detection) -v"
 
-but we will improve this using Github Actions to run tests automatically on every push:
+- (Not needed) to generate a visualized html report of our tests, run "pytest tests/ -v --html=tests/report.html"
